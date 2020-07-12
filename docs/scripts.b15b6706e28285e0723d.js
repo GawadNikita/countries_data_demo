@@ -1,0 +1,1 @@
+function changeTheme(e){var t=document.getElementsByClassName("label-name");1==e.target.checked?(t.innerHTML="light theme",document.body.setAttribute("data-page-theme","dark")):(t.innerHTML="dark theme",document.body.removeAttribute("data-page-theme"))}
