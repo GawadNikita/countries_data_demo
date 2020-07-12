@@ -1,6 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { filter } from 'rxjs/operators';
-import { count } from 'console';
 export interface filterInput{
   region: string,
   searchInput?: string
@@ -27,7 +26,6 @@ export class FilterCountryByRegionPipe implements PipeTransform {
     })
 
     if(filterInput.searchInput != null){
-      console.log("here" + this.result.length)
       this.result =  countryList.filter(country => {
         return String(country.name).toLowerCase().includes(filterInput.searchInput.toLowerCase());
       }).filter((country) =>{
