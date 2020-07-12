@@ -1,6 +1,12 @@
 @import '../../../styles/mixins';
 .search-filter-wrapper{ margin:  0 0 26px; display: flex; justify-content: space-between;
-  input{ width: 414px;}
+  .search-input-wrapper{
+    position: relative;
+    .fa{ position: absolute; top: 13px; bottom: 0; left: 10px; font-size: 13px;}
+  }
+  input{ 
+    width: 414px; padding-left: 35px;
+  }
 }
 .countries-list{
   >.col-4{padding-bottom: 36px; align-self: flex-end; }
