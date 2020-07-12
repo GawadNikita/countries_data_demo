@@ -1,0 +1,31 @@
+<div class="search-filter-wrapper">
+  <input type="text" name="" id="" [(ngModel)]="searchText" placeholder="Search for country">
+  <select name="" id="" [(ngModel)]="selectedRegion">
+    <option value="all">Filter By Region</option>
+    <option value="{{name}}" *ngFor="let name of region_names">{{name == undefined ? 'Others Regions' : name}}</option>
+  </select>
+</div>
+<ul class="row countries-list">
+  <li class="col-4" *ngFor="let country of (countries | filterCountryByRegion: {'region': selectedRegion, 'searchInput': searchText})">
+    <a class="data-wrapper" href="/country/{{country.name}}">
+      <div class="flag-image">
+        <img src="{{country.flag}}" alt="" class="img-responsive">
+      </div>
+      <div class="content">
+        <h3 class="data-title">{{country.name}}</h3>
+        <div class="field-title">
+          <strong>Population:</strong> 
+          <span class="field-value">{{country.population}}</span>
+        </div>
+        <div class="field-title">
+          <strong>Region:</strong> 
+          <span class="field-value">{{country.region}}</span>
+        </div>
+        <div class="field-title">
+          <strong>Capital:</strong> 
+          <span class="field-value">{{country.capital}}</span>
+        </div>
+      </div>
+    </a>
+  </li>
+</ul>

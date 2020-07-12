@@ -1,0 +1,31 @@
+@import '../../../styles/mixins';
+.back-link-wrapper{ padding: 0 18px;
+  .button{ 
+    .fa{padding-right: 10px;}
+  }
+}
+.country-info{
+  margin: 42px 0 0;
+  >.col-6{
+    align-self: center;
+  }
+  .country-name{
+    @include setFontSW(18px,var(--text-color), bold); margin: 0 0 18px;
+  }
+  .borders-wrapper{ margin: 40px -5px 0;
+    >strong{ margin: 0 5px;}
+  }
+}
+
+@media screen and (max-width: 991px){
+  .country-info{
+    .country-name{ margin-top: 30px;}
+  }
+}
+@media screen and (max-width: 576px){
+  .country-info{
+    .borders-wrapper{
+      >strong{ display: block; margin-bottom: 12px;}
+    }
+  }
+}

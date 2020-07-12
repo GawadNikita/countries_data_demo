@@ -1,0 +1,10 @@
+@import './var';
+
+@mixin addBoxShadow(){
+  box-shadow: 0 2px 6px 0 var(--box-shadow); border: 1px solid var(--box-shadow); border-radius: 6px;
+  // box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.17); border: 1px solid rgba(0, 0, 0, 0.09); border-radius: 10px;
+}
+
+@mixin setFontSW($size, $color, $weight){
+  font-size: $size; color: $color; font-weight: $weight;
+}

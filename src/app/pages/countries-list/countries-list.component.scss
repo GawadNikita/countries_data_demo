@@ -1,0 +1,24 @@
+@import '../../../styles/mixins';
+.search-filter-wrapper{ margin:  0 0 26px; display: flex; justify-content: space-between;
+  input{ width: 414px;}
+}
+.countries-list{
+  >.col-4{padding-bottom: 36px; align-self: flex-end; }
+}
+.result-zero-wrapper{
+  @include addBoxShadow(); @include setFontSW(13px, var(--text-color), normal); padding: 20px 14px; margin: 0 0 20px;
+}
+
+@media screen and (max-width: 767px){
+  .search-filter-wrapper{ 
+    flex-wrap: wrap;
+    input{ margin: 0 0 20px;}
+  }
+}
+
+@media screen and (min-width: 576px){
+  .countries-list{
+    .flag-image{height: 152px; overflow: hidden;}
+  }
+
+}

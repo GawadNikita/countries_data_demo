@@ -1,0 +1,49 @@
+<div class="button-wrapper back-link-wrapper">
+  <a href="javascript:void(0);" class="button" (click)="backToHome()"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</a>
+</div>
+
+<div class="row country-info">
+  <div class="col-6">
+    <img src="{{countryData.flag}}" class="img-responsive" alt="">
+  </div>
+  <div class="col-6">
+    <div class="country-name">{{countryData.name}}</div>
+    <div class="row">
+      <div class="col-6">
+        <div class="field-title">
+          <strong>Native Name:</strong> <span class="field-value">{{countryData.nativeName}}</span>
+        </div>
+        <div class="field-title">
+          <strong>Population:</strong> <span class="field-value">{{countryData.population | number}}</span>
+        </div>
+        <div class="field-title">
+          <strong>Region:</strong> <span class="field-value">{{countryData.region}}</span>
+        </div>
+        <div class="field-title">
+          <strong>Sub Region:</strong> <span class="field-value">{{countryData.subregion}}</span>
+        </div>
+        <div class="field-title">
+          <strong>Capital:</strong> <span class="field-value">{{countryData.capital}}</span>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="field-title">
+          <strong>Top level domains:</strong> <span class="field-value">{{countryData.topLevelDomain}}</span>
+        </div>
+        
+        <div class="field-title">
+          <strong>Currencies:</strong> <span *ngFor="let currency of countryData.currencies" class="field-value">{{currency.name}}</span>
+        </div>
+        <div class="field-title">
+          <strong>Languages:</strong> <span *ngFor="let currency of countryData.languages" class="field-value">{{currency.name}}</span>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="borders-wrapper button-wrapper field-title">
+      <strong>Borders: </strong>
+      <a class="button" href="/country/{{border}}" *ngFor="let border of borderNames">{{border}}</a> 
+    </div>
+  </div>
+</div>

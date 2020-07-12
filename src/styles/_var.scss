@@ -1,0 +1,23 @@
+$grey: #ebe5e5;
+$dark_grey : #292F33;
+
+
+
+
+// // // Dark : text-color: #fff; foreground: #2b3945; background: #202c37; box-shadow:
+// // // #2c3235;
+
+
+
+
+:root {
+  --text-color: #111517;
+  --bg-color: #fff;
+  --box-shadow: #ebe5e5
+}
+
+[data-page-theme="dark"] {
+  --text-color: #fff;
+  --bg-color: #202c37;
+  --box-shadow:#2c3235
+}
