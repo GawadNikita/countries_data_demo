@@ -38,9 +38,9 @@ ul{ list-style: none; margin: 0; padding: 0}
 }
 select { 
   @include addBoxShadow(); padding: 12px 14px; outline: none; min-width: 150px;
-  -webkit-appearance: none; -moz-appearance: none; appearance: none; left: -5px!important; position: relative;
+  -webkit-appearance: none; -moz-appearance: none; appearance: none; position: relative;
   &:after{
-    content: ""; position: absolute; top: 0; right: 0; width: 10px; height: 10px;
+    content: ""; position: absolute; top: 0; right: 0; width: 10px; height: 10px; display: block;
   }
 
   option{ padding: 6px 14px; outline: none; color: var(--text-color);}
